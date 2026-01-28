@@ -81,11 +81,6 @@
           "color": "rgb(55, 126, 184)",
           "signal": "V(/ENV_OUT) (gain)",
           "trace_type": 521
-        },
-        {
-          "color": "rgb(77, 175, 74)",
-          "signal": "V(/Notch) (gain)",
-          "trace_type": 521
         }
       ]
     }
