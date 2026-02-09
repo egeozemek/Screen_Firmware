@@ -2,3 +2,8 @@ build/
 .vscode/
 .west/
 .DS_Store
+
+
+# Ignore KiCad backup folders (e.g. audio_and_microphone-backups/)
+*-backups/
+
