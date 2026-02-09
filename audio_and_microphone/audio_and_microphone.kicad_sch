@@ -896,6 +896,209 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Simulation_SPICE:VDC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "V"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "1"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Voltage source, DC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" "DC"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "simulation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VDC_0_0"
+				(polyline
+					(pts
+						(xy -1.27 0.254) (xy 1.27 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -0.254) (xy -1.27 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -0.254) (xy -0.254 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -0.254) (xy 0.762 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at 0 1.905 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "VDC_0_1"
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "VDC_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Simulation_SPICE:VPWL"
 			(pin_numbers
 				(hide yes)
@@ -1033,6 +1236,194 @@
 				)
 			)
 			(symbol "VPWL_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Simulation_SPICE:VSIN"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "V"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "VSIN"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Voltage source, sinusoidal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Params" "dc=0 ampl=1 f=1k ac=1"
+				(at 2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Sim.Type" "SIN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "simulation ac vac"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VSIN_0_0"
+				(arc
+					(start -1.27 0)
+					(mid -0.635 0.6323)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.27 0)
+					(mid 0.635 -0.6323)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at 0 1.905 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "VSIN_0_1"
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "VSIN_1_1"
 				(pin passive line
 					(at 0 5.08 270)
 					(length 2.54)
@@ -1300,16 +1691,16 @@
 		)
 	)
 	(junction
-		(at 85.09 81.28)
+		(at 80.01 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0443b51e-728b-4d9b-b710-9e447cf88555")
+		(uuid "0bb4efd8-98e6-4473-b226-298270570210")
 	)
 	(junction
-		(at 71.12 93.98)
+		(at 107.95 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1a7c3c45-89dd-42e6-b571-c7d0a07b2b43")
+		(uuid "1c4f74b3-15cb-48a2-951e-69e8170a8e51")
 	)
 	(junction
 		(at 123.19 161.29)
@@ -1318,10 +1709,10 @@
 		(uuid "2a79539e-aea8-4460-b875-f50ccffffcac")
 	)
 	(junction
-		(at 101.6 58.42)
+		(at 60.96 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3f558b57-123f-4e1a-bddc-37bc51a6b9f8")
+		(uuid "32caeb4c-f43d-472d-bb6c-f8178666ea11")
 	)
 	(junction
 		(at 153.67 161.29)
@@ -1330,10 +1721,16 @@
 		(uuid "4653abef-58ff-4ce4-8e00-fc9d8fd3177e")
 	)
 	(junction
-		(at 177.8 31.75)
+		(at 153.67 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "532d084d-60d0-4d0e-b18d-be85500ee861")
+		(uuid "477eae8f-f33b-4e34-b00c-a655d8098167")
+	)
+	(junction
+		(at 121.92 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ea3e01b-425c-4be4-8919-63903b737b69")
 	)
 	(junction
 		(at 186.69 143.51)
@@ -1342,22 +1739,16 @@
 		(uuid "5a2ace12-bfe7-4c3a-a5c7-ec92b16808ee")
 	)
 	(junction
-		(at 52.07 55.88)
+		(at 186.69 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "848665c1-a7f4-4188-adcf-bfa79433ecd2")
+		(uuid "7158c612-3115-4191-826a-4c4dbfe42653")
 	)
 	(junction
-		(at 99.06 93.98)
+		(at 110.49 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "880636d5-12cf-4ef5-a3fa-d6646187ac12")
-	)
-	(junction
-		(at 85.09 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8ac35dcf-0cfe-439c-90ee-653d4df9d638")
+		(uuid "79bf3832-a4ae-4feb-9529-9393e882b5e4")
 	)
 	(junction
 		(at 139.7 140.97)
@@ -1366,10 +1757,10 @@
 		(uuid "910bd47a-b25f-48dd-8af4-bf48e0db1edd")
 	)
 	(junction
-		(at 78.74 33.02)
+		(at 80.01 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9f3f3155-f642-410f-9a41-5dbe16b2cfdf")
+		(uuid "a9c9faf8-f560-47bc-8cb3-775b3b1408af")
 	)
 	(junction
 		(at 100.33 149.86)
@@ -1378,16 +1769,10 @@
 		(uuid "aa228b06-d9bd-4942-abe2-6febaf91dc48")
 	)
 	(junction
-		(at 99.06 81.28)
+		(at 93.98 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ae8c1a73-797a-4f28-8ac7-99df82feee9d")
-	)
-	(junction
-		(at 113.03 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c2d7b10a-30cf-46ab-ad16-dd77c33a3dc5")
+		(uuid "b96658da-8b69-4751-952f-456b78b6f29b")
 	)
 	(junction
 		(at 123.19 138.43)
@@ -1396,16 +1781,22 @@
 		(uuid "c5a7c572-d64b-4a5d-a693-81dc9078842d")
 	)
 	(junction
+		(at 87.63 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db127617-90b7-4360-bfa2-01a58660f924")
+	)
+	(junction
+		(at 107.95 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eb09ab71-6aec-4d1f-8ae4-36d1230f0208")
+	)
+	(junction
 		(at 165.1 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f07c7295-c85f-4c33-9bb3-d9402924949d")
-	)
-	(junction
-		(at 71.12 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f5ba03e7-9c62-4c84-b3aa-8dcdbd5bc522")
 	)
 	(junction
 		(at 85.09 149.86)
@@ -1414,10 +1805,10 @@
 		(uuid "f68a362a-cf1e-4e10-9b4e-ff8799b157d4")
 	)
 	(junction
-		(at 144.78 85.09)
+		(at 93.98 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f6d009c5-89ff-4960-b125-d046a491dfc1")
+		(uuid "f925ce3c-8633-41a1-a4ab-e74d79db9f88")
 	)
 	(wire
 		(pts
@@ -1431,73 +1822,33 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 33.02) (xy 78.74 39.37)
+			(xy 153.67 97.79) (xy 153.67 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "068901fb-dc3b-4f7e-9dfb-a835ea6a3b4b")
+		(uuid "03c92da4-c5d3-458a-add9-c0c1fcdd3814")
 	)
 	(wire
 		(pts
-			(xy 76.2 68.58) (xy 101.6 68.58)
+			(xy 153.67 86.36) (xy 153.67 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "08b60a71-48e8-44c8-87b2-21080b20509f")
+		(uuid "0969ddfc-5979-427c-992e-61f528e52479")
 	)
 	(wire
 		(pts
-			(xy 113.03 81.28) (xy 99.06 81.28)
+			(xy 196.85 33.02) (xy 186.69 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "08c376cd-2004-4c29-9d1f-c7599e00fe90")
-	)
-	(wire
-		(pts
-			(xy 99.06 93.98) (xy 85.09 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a0fb9a3-0b38-43dc-8c3d-e50279b13d52")
-	)
-	(wire
-		(pts
-			(xy 82.55 60.96) (xy 76.2 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0be58448-ce5a-48d3-a664-9f88b574c78c")
-	)
-	(wire
-		(pts
-			(xy 101.6 68.58) (xy 101.6 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d31a0de-596b-42e1-8d11-593316b66e8d")
-	)
-	(wire
-		(pts
-			(xy 52.07 62.23) (xy 52.07 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e22dc79-400c-4d24-bd1a-f8975107805a")
+		(uuid "0b039070-3f4c-4058-a99a-28b821741b8d")
 	)
 	(wire
 		(pts
@@ -1511,6 +1862,16 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 95.25) (xy 60.96 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1341b480-ed6e-41b0-8d9a-ef8d68b7583c")
+	)
+	(wire
+		(pts
 			(xy 186.69 161.29) (xy 186.69 143.51)
 		)
 		(stroke
@@ -1521,53 +1882,63 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 144.78 88.9)
+			(xy 60.96 57.15) (xy 60.96 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "15854575-0db3-437b-9c1c-f3ab355607c6")
+		(uuid "149d7f66-4a0f-466f-9458-8a0ab1ced282")
 	)
 	(wire
 		(pts
-			(xy 85.09 81.28) (xy 85.09 85.09)
+			(xy 167.64 69.85) (xy 167.64 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "16593c4f-ec3a-4119-8511-9028338835c1")
+		(uuid "14abba83-761f-4f23-9ea3-e1d9788da909")
 	)
 	(wire
 		(pts
-			(xy 187.96 34.29) (xy 187.96 31.75)
+			(xy 87.63 34.29) (xy 87.63 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "17e11879-1f0e-4fd5-9ce8-7f7ed6314eb3")
+		(uuid "1827b275-5e83-475d-9d74-a9848a9caed5")
 	)
 	(wire
 		(pts
-			(xy 76.2 60.96) (xy 76.2 68.58)
+			(xy 107.95 95.25) (xy 93.98 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "188b5b5f-cfb3-420a-bb13-a2f79feae160")
+		(uuid "1a0815ff-758c-4712-9393-98b664803a20")
 	)
 	(wire
 		(pts
-			(xy 101.6 58.42) (xy 111.76 58.42)
+			(xy 107.95 91.44) (xy 107.95 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1ace44f4-c03f-4202-a75f-7a60c196dbc1")
+		(uuid "1d33ee5f-9f05-4746-8d40-32be1ab044ba")
+	)
+	(wire
+		(pts
+			(xy 196.85 64.77) (xy 203.2 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1feea07d-255b-4172-9992-4ac7e6ac6a86")
 	)
 	(wire
 		(pts
@@ -1581,33 +1952,33 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 81.28) (xy 71.12 83.82)
+			(xy 110.49 69.85) (xy 110.49 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "204e11df-9e24-4708-a86c-1e273a9ca24f")
+		(uuid "20b29aae-59cc-434b-9609-84f22e2e43bb")
 	)
 	(wire
 		(pts
-			(xy 187.96 63.5) (xy 194.31 63.5)
+			(xy 93.98 91.44) (xy 93.98 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "22934075-3854-45af-a6bf-89e0cd6193fb")
+		(uuid "212e5f4f-6920-4bec-a47f-e563a755f4c2")
 	)
 	(wire
 		(pts
-			(xy 44.45 55.88) (xy 52.07 55.88)
+			(xy 125.73 59.69) (xy 176.53 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "28a35d36-9921-4936-9a7f-74775f04ada0")
+		(uuid "22710934-84a7-4c17-b81b-6657d825c1d5")
 	)
 	(wire
 		(pts
@@ -1621,63 +1992,43 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 63.5) (xy 217.17 60.96)
+			(xy 60.96 63.5) (xy 60.96 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2dd31ff3-a660-463b-9929-6e949691edd3")
+		(uuid "2c1cfa4a-6a78-49d4-b0ca-36c817ad5170")
 	)
 	(wire
 		(pts
-			(xy 158.75 68.58) (xy 158.75 85.09)
+			(xy 196.85 35.56) (xy 196.85 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "309767c3-f48b-4090-b7b4-abfdbefca5cd")
+		(uuid "2e4384d5-f798-4d21-8bcc-e1eb33c1b642")
 	)
 	(wire
 		(pts
-			(xy 187.96 39.37) (xy 187.96 43.18)
+			(xy 210.82 64.77) (xy 226.06 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "34254308-c0d9-4dbc-896f-0e55edef650e")
+		(uuid "320733de-9dc5-4509-afcd-3cf92a8e1278")
 	)
 	(wire
 		(pts
-			(xy 158.75 85.09) (xy 144.78 85.09)
+			(xy 29.21 57.15) (xy 45.72 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "344a4058-ea19-4425-b5f4-801738cbccf0")
-	)
-	(wire
-		(pts
-			(xy 113.03 90.17) (xy 113.03 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "361b314d-a47a-4e7d-b5c5-03da82033117")
-	)
-	(wire
-		(pts
-			(xy 71.12 91.44) (xy 71.12 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37144e69-c050-4811-8951-034238d93e89")
+		(uuid "39d4791d-e775-403b-b93c-62c7d3a31e78")
 	)
 	(wire
 		(pts
@@ -1731,33 +2082,13 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 71.12) (xy 194.31 68.58)
+			(xy 186.69 33.02) (xy 186.69 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4abe5c7a-95d5-4769-8d35-5c0a0b517cff")
-	)
-	(wire
-		(pts
-			(xy 217.17 60.96) (xy 223.52 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fc04061-46c3-4991-9ba4-2e68c2d6265b")
-	)
-	(wire
-		(pts
-			(xy 87.63 50.8) (xy 87.63 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5265563d-c76f-4c10-ae0f-e775d964ae31")
+		(uuid "4f73f609-51a1-42c6-bd46-5699b4b62faf")
 	)
 	(wire
 		(pts
@@ -1771,13 +2102,13 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 81.28) (xy 123.19 81.28)
+			(xy 147.32 64.77) (xy 176.53 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "552af9bd-c860-451e-a60e-926d4d2f5962")
+		(uuid "5618d35a-4c8a-4c71-8794-aa4a1284cc12")
 	)
 	(wire
 		(pts
@@ -1791,23 +2122,43 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 58.42) (xy 223.52 58.42)
+			(xy 80.01 82.55) (xy 80.01 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5bf69e84-0aa7-4d7a-8e04-bebbdc614ca4")
+		(uuid "5c13c3c7-2483-4e8f-8f26-66f1b83b95b2")
 	)
 	(wire
 		(pts
-			(xy 167.64 68.58) (xy 158.75 68.58)
+			(xy 196.85 69.85) (xy 203.2 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5dfd61bb-719d-4697-8552-65c66b4d6aa9")
+		(uuid "5c3416e0-1aea-405d-875b-daf95f35d655")
+	)
+	(wire
+		(pts
+			(xy 96.52 71.12) (xy 96.52 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e32e0af-8e2e-48b0-b5b3-1a65f262185f")
+	)
+	(wire
+		(pts
+			(xy 91.44 62.23) (xy 85.09 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e403ee1-6a9b-4513-93e7-0ce8a6785009")
 	)
 	(wire
 		(pts
@@ -1821,16 +2172,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 81.28) (xy 138.43 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61257906-4141-4bac-81db-a08e7568c868")
-	)
-	(wire
-		(pts
 			(xy 100.33 138.43) (xy 100.33 149.86)
 		)
 		(stroke
@@ -1841,23 +2182,43 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 44.45) (xy 78.74 46.99)
+			(xy 60.96 95.25) (xy 60.96 97.79)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "67ea233d-0015-456e-ba35-6ba3bac4d329")
+		(uuid "63dcab3f-756b-469a-bbe5-65cab7f71c3e")
 	)
 	(wire
 		(pts
-			(xy 87.63 69.85) (xy 87.63 66.04)
+			(xy 196.85 59.69) (xy 232.41 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "698397cf-8580-4bc3-a5f1-bb2b8e6f2223")
+		(uuid "687b6326-c656-4e71-b2ef-80d6917fafa2")
+	)
+	(wire
+		(pts
+			(xy 85.09 62.23) (xy 85.09 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68e8c95d-f2b9-4582-8321-3e109149655f")
+	)
+	(wire
+		(pts
+			(xy 93.98 82.55) (xy 93.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6af358d8-2b78-49f4-8368-e33dd5f4fab7")
 	)
 	(wire
 		(pts
@@ -1871,6 +2232,26 @@
 	)
 	(wire
 		(pts
+			(xy 80.01 92.71) (xy 80.01 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e6f8eb8-2dd5-4bd3-8790-7c64427d0d47")
+	)
+	(wire
+		(pts
+			(xy 121.92 95.25) (xy 107.95 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7e8df8-b658-4021-99cd-aeb0a7adf205")
+	)
+	(wire
+		(pts
 			(xy 123.19 138.43) (xy 123.19 140.97)
 		)
 		(stroke
@@ -1878,6 +2259,16 @@
 			(type default)
 		)
 		(uuid "73d960ae-8483-4277-a421-713b84769e74")
+	)
+	(wire
+		(pts
+			(xy 196.85 40.64) (xy 196.85 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78848fde-0451-4c51-a49b-f36f56ab8e33")
 	)
 	(wire
 		(pts
@@ -1901,36 +2292,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 96.52) (xy 144.78 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b4969bb-aa3e-4abc-bae6-d8949013457b")
-	)
-	(wire
-		(pts
-			(xy 177.8 31.75) (xy 177.8 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7baa110a-7520-478c-9d33-f59d6adddfbc")
-	)
-	(wire
-		(pts
-			(xy 20.32 55.88) (xy 36.83 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c086679-8f29-4db3-9256-bef505befb41")
-	)
-	(wire
-		(pts
 			(xy 123.19 161.29) (xy 139.7 161.29)
 		)
 		(stroke
@@ -1951,13 +2312,13 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 55.88) (xy 52.07 57.15)
+			(xy 121.92 82.55) (xy 107.95 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "88069567-7bf3-4202-8cc8-1526de37d046")
+		(uuid "874a3b34-90a5-44f9-8a7e-736e9f814ba3")
 	)
 	(wire
 		(pts
@@ -1971,33 +2332,43 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 33.02) (xy 78.74 33.02)
+			(xy 167.64 86.36) (xy 153.67 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9134a01e-e5cb-4fc1-8bd1-410ec3bf6670")
+		(uuid "8d3c8118-c4c0-48e9-a88d-b8b11befba17")
 	)
 	(wire
 		(pts
-			(xy 85.09 90.17) (xy 85.09 93.98)
+			(xy 106.68 59.69) (xy 110.49 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9279254a-3967-4c38-8239-718dc7891380")
+		(uuid "8ed0678c-03e3-452b-9052-cdbe0015972f")
 	)
 	(wire
 		(pts
-			(xy 187.96 68.58) (xy 194.31 68.58)
+			(xy 176.53 69.85) (xy 167.64 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "956ef13c-dc80-4945-8bca-705929386614")
+		(uuid "9699cf4c-2e87-4ac1-9b5a-906fc5c38e30")
+	)
+	(wire
+		(pts
+			(xy 31.75 82.55) (xy 45.72 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "983feeb6-dfc8-4b89-ac3a-f0c59917d285")
 	)
 	(wire
 		(pts
@@ -2011,63 +2382,83 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 63.5) (xy 217.17 63.5)
+			(xy 87.63 45.72) (xy 87.63 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9f59261d-bb4b-4353-a33c-1fa937aba129")
+		(uuid "9dba5644-1ccb-4bae-ae10-694614303b9f")
 	)
 	(wire
 		(pts
-			(xy 144.78 85.09) (xy 144.78 81.28)
+			(xy 53.34 82.55) (xy 80.01 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a0fedb7f-bd98-403b-9c3e-7f415c0d73e3")
+		(uuid "9ee684fa-c355-421e-8b8f-95a26e9c233d")
 	)
 	(wire
 		(pts
-			(xy 44.45 81.28) (xy 71.12 81.28)
+			(xy 96.52 52.07) (xy 96.52 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a58aea2d-c4e1-4641-b184-e05b5820f3d9")
+		(uuid "a18c25f9-cb21-4d1a-b585-4e46d3cf07ef")
 	)
 	(wire
 		(pts
-			(xy 116.84 58.42) (xy 167.64 58.42)
+			(xy 226.06 62.23) (xy 232.41 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a6f2a2f6-0c38-4a84-a2bc-52a96f33c7d0")
+		(uuid "a56e584e-d786-4566-92d7-a14480113ea2")
 	)
 	(wire
 		(pts
-			(xy 99.06 81.28) (xy 85.09 81.28)
+			(xy 203.2 72.39) (xy 203.2 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a93e333b-31a9-4020-b980-02285df3e5f9")
+		(uuid "a95d99ca-0e5e-4191-9054-1e002300b31a")
 	)
 	(wire
 		(pts
-			(xy 52.07 93.98) (xy 52.07 96.52)
+			(xy 121.92 82.55) (xy 132.08 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a98138b9-e914-4999-8c3e-7405ae678831")
+		(uuid "a9e56f77-ee4a-4b70-8df7-edabdac09601")
+	)
+	(wire
+		(pts
+			(xy 226.06 64.77) (xy 226.06 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac8190f3-8a1f-4d27-83a3-ab57eaa19a39")
+	)
+	(wire
+		(pts
+			(xy 147.32 82.55) (xy 147.32 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad7ca7c9-0bc5-434c-8fa6-183fda4e7355")
 	)
 	(wire
 		(pts
@@ -2081,23 +2472,23 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 31.75) (xy 177.8 31.75)
+			(xy 60.96 57.15) (xy 91.44 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aeb6d6d1-d68c-47f2-b9e1-0a9726ac0f62")
+		(uuid "af68370d-c7c5-4a30-a13a-743bd7cb82f2")
 	)
 	(wire
 		(pts
-			(xy 113.03 93.98) (xy 99.06 93.98)
+			(xy 110.49 59.69) (xy 120.65 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "af9eb1c9-ffb1-4593-9e01-27be1df9459f")
+		(uuid "afa76a0e-a98b-4f2a-9137-b0b6a7b6d870")
 	)
 	(wire
 		(pts
@@ -2108,16 +2499,6 @@
 			(type default)
 		)
 		(uuid "b21ba17d-ba41-450d-a519-7948493bb8da")
-	)
-	(wire
-		(pts
-			(xy 85.09 93.98) (xy 71.12 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b41756d8-dde3-4198-aafe-a3fa603e1b04")
 	)
 	(wire
 		(pts
@@ -2141,6 +2522,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 82.55) (xy 107.95 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baf9e27c-6b68-478d-b815-19cbf692bfd6")
+	)
+	(wire
+		(pts
 			(xy 100.33 149.86) (xy 100.33 161.29)
 		)
 		(stroke
@@ -2148,6 +2539,16 @@
 			(type default)
 		)
 		(uuid "bc5277ce-6523-4ec0-8bf6-b50574457c83")
+	)
+	(wire
+		(pts
+			(xy 203.2 77.47) (xy 203.2 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c635f718-7525-4a4b-b9e6-78cb25e4d900")
 	)
 	(wire
 		(pts
@@ -2171,13 +2572,13 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 58.42) (xy 101.6 58.42)
+			(xy 121.92 86.36) (xy 121.92 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cc6c2ebb-b208-4f9c-97c5-71424d738d4a")
+		(uuid "ca93f3ed-16f0-4cb8-ab2f-c574a67c9836")
 	)
 	(wire
 		(pts
@@ -2191,16 +2592,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 81.28) (xy 36.83 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ceaa0916-2bef-4e8c-af7c-1e29fb8d5ecb")
-	)
-	(wire
-		(pts
 			(xy 177.8 128.27) (xy 177.8 130.81)
 		)
 		(stroke
@@ -2211,23 +2602,23 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 90.17) (xy 99.06 93.98)
+			(xy 53.34 57.15) (xy 60.96 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d51d5281-4fd5-4f27-b935-f644bfa75eae")
+		(uuid "d5323395-c11f-4d90-a850-266a401813f2")
 	)
 	(wire
 		(pts
-			(xy 113.03 85.09) (xy 113.03 81.28)
+			(xy 93.98 95.25) (xy 80.01 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d92ce391-e981-48fd-87a4-c1169023bb5a")
+		(uuid "d7a70d5a-69ac-4aa5-a14a-a91a2e92ec35")
 	)
 	(wire
 		(pts
@@ -2251,33 +2642,23 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 81.28) (xy 138.43 81.28)
+			(xy 153.67 86.36) (xy 153.67 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e86f9dfb-ea81-4efc-bfc2-e63a9d8810ac")
+		(uuid "e0c33c5e-9953-4666-8d54-c5c2ed472552")
 	)
 	(wire
 		(pts
-			(xy 71.12 93.98) (xy 52.07 93.98)
+			(xy 96.52 34.29) (xy 87.63 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e9cef218-c180-4883-8a78-54a91853bc76")
-	)
-	(wire
-		(pts
-			(xy 194.31 76.2) (xy 194.31 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb14ac7f-ac24-4af1-bc50-55061a0e50fa")
+		(uuid "e3737495-e5e8-4583-bd8c-d94327c1e40e")
 	)
 	(wire
 		(pts
@@ -2291,6 +2672,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 91.44) (xy 121.92 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eeadec6c-a2ca-4fec-b912-33352068a7eb")
+	)
+	(wire
+		(pts
 			(xy 85.09 149.86) (xy 100.33 149.86)
 		)
 		(stroke
@@ -2301,43 +2692,13 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 55.88) (xy 82.55 55.88)
+			(xy 85.09 69.85) (xy 110.49 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f625db97-01c1-4c57-88a6-d316a738f037")
-	)
-	(wire
-		(pts
-			(xy 85.09 81.28) (xy 71.12 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6a1e15a-06ac-4fe5-b660-596830b14d6e")
-	)
-	(wire
-		(pts
-			(xy 99.06 81.28) (xy 99.06 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f70e43d8-bb19-4595-8e67-01255d103b7c")
-	)
-	(wire
-		(pts
-			(xy 138.43 63.5) (xy 167.64 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7369fc4-3320-4877-a277-69732eeb6ff8")
+		(uuid "f3168c71-1e5a-48bc-9416-2856581e1c97")
 	)
 	(wire
 		(pts
@@ -2361,6 +2722,36 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 82.55) (xy 147.32 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f96b12f3-b296-4b0e-bf8c-ea3fcf06fb49")
+	)
+	(wire
+		(pts
+			(xy 107.95 82.55) (xy 93.98 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdd74c93-e791-4440-b0c2-83a17c96ae6c")
+	)
+	(wire
+		(pts
+			(xy 93.98 82.55) (xy 80.01 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdee2299-40a3-4304-8825-5d61d563cc70")
+	)
+	(wire
+		(pts
 			(xy 165.1 135.89) (xy 165.1 120.65)
 		)
 		(stroke
@@ -2380,28 +2771,28 @@
 		(uuid "776430c8-82cd-459a-bb91-b04aaea1d02e")
 	)
 	(label "PWM_VOL"
-		(at 22.86 81.28 0)
+		(at 31.75 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "96b70bab-45db-4d85-8c4c-bb4b6449dfd4")
+		(uuid "a9f029c2-58d5-4113-a7c3-c9f706eacafe")
 	)
 	(label "226 Hz"
-		(at 20.32 55.88 0)
+		(at 29.21 57.15 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "bff613b9-3d48-4e77-a3cf-85b1e6ccf6fa")
+		(uuid "bc8e417e-815d-43c1-bc22-16ff6af8ceea")
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 144.78 77.47 0)
+		(at 153.67 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2410,7 +2801,7 @@
 		(fields_autoplaced yes)
 		(uuid "08456997-d200-4ae7-bfe3-3b256d0feef9")
 		(property "Reference" "R23"
-			(at 147.32 76.1999 0)
+			(at 156.21 77.4699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2419,7 +2810,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 147.32 78.7399 0)
+			(at 156.21 80.0099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2428,7 +2819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.796 77.724 90)
+			(at 154.686 78.994 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2437,7 +2828,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 77.47 0)
+			(at 153.67 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2446,7 +2837,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 144.78 77.47 0)
+			(at 153.67 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2461,7 +2852,7 @@
 			(uuid "ed1f08a6-e704-472d-a4d7-c914b5be8136")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R23")
 					(unit 1)
@@ -2471,7 +2862,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:OPAMP")
-		(at 90.17 58.42 0)
+		(at 99.06 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2480,7 +2871,7 @@
 		(fields_autoplaced yes)
 		(uuid "0bf110a8-2fe9-431d-b600-f1b1a80a8e89")
 		(property "Reference" "U3"
-			(at 97.79 53.2698 0)
+			(at 106.68 54.5398 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2488,7 +2879,7 @@
 			)
 		)
 		(property "Value" "${SIM.PARAMS}"
-			(at 97.79 55.1749 0)
+			(at 106.68 56.4449 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2496,7 +2887,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2505,7 +2896,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2514,7 +2905,7 @@
 			)
 		)
 		(property "Description" "Operational amplifier, single"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2523,7 +2914,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2532,7 +2923,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2542,7 +2933,7 @@
 			)
 		)
 		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2551,7 +2942,7 @@
 			)
 		)
 		(property "Sim.Name" "kicad_builtin_opamp"
-			(at 90.17 58.42 0)
+			(at 99.06 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2575,7 +2966,7 @@
 			(uuid "33b19e54-f07d-4b78-9a44-4010157704d8")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "U3")
 					(unit 1)
@@ -2585,7 +2976,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
-		(at 228.6 58.42 0)
+		(at 237.49 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2594,7 +2985,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f11cb40-b22d-47d8-9079-dfb39ab16a2d")
 		(property "Reference" "J2"
-			(at 231.14 58.4199 0)
+			(at 240.03 59.6899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2603,7 +2994,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02"
-			(at 231.14 60.9599 0)
+			(at 240.03 62.2299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2612,7 +3003,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 58.42 0)
+			(at 237.49 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2621,7 +3012,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.6 58.42 0)
+			(at 237.49 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2630,7 +3021,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 228.6 58.42 0)
+			(at 237.49 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2645,7 +3036,7 @@
 			(uuid "0b2c41b2-5c0e-4053-8352-4eff12fa227c")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "J2")
 					(unit 1)
@@ -2791,7 +3182,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 144.78 101.6 0)
+		(at 153.67 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2800,7 +3191,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e27a4c5-9e0f-4151-b305-56323f9883b8")
 		(property "Reference" "#PWR012"
-			(at 144.78 107.95 0)
+			(at 153.67 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2809,7 +3200,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 144.78 106.68 0)
+			(at 153.67 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2817,7 +3208,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 101.6 0)
+			(at 153.67 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2826,7 +3217,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 101.6 0)
+			(at 153.67 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2835,7 +3226,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 144.78 101.6 0)
+			(at 153.67 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2847,7 +3238,7 @@
 			(uuid "d2e78046-6da9-4c5e-99d6-f7b61928042a")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR012")
 					(unit 1)
@@ -2857,7 +3248,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 198.12 63.5 270)
+		(at 207.01 64.77 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2866,7 +3257,7 @@
 		(fields_autoplaced yes)
 		(uuid "2bad25b3-1629-4668-93c4-749478c5f373")
 		(property "Reference" "R34"
-			(at 198.12 57.15 90)
+			(at 207.01 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2874,7 +3265,7 @@
 			)
 		)
 		(property "Value" "300"
-			(at 198.12 59.69 90)
+			(at 207.01 60.96 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2882,7 +3273,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 197.866 64.516 90)
+			(at 206.756 65.786 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2891,7 +3282,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 63.5 0)
+			(at 207.01 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2900,7 +3291,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 198.12 63.5 0)
+			(at 207.01 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2915,7 +3306,7 @@
 			(uuid "c0350e6c-cd22-4136-b119-30d8dff468b7")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R34")
 					(unit 1)
@@ -2925,7 +3316,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 177.8 76.2 0)
+		(at 186.69 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2934,7 +3325,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cd00a1e-95f9-4f0c-96a8-d274afb57c02")
 		(property "Reference" "#PWR013"
-			(at 177.8 82.55 0)
+			(at 186.69 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2943,7 +3334,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 81.28 0)
+			(at 186.69 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2951,7 +3342,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 76.2 0)
+			(at 186.69 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2960,7 +3351,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 76.2 0)
+			(at 186.69 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2969,7 +3360,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 76.2 0)
+			(at 186.69 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2981,7 +3372,7 @@
 			(uuid "82dc01f2-5cb9-4bfd-9db4-65506c7023d1")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR013")
 					(unit 1)
@@ -2991,7 +3382,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 177.8 31.75 0)
+		(at 186.69 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2999,7 +3390,7 @@
 		(dnp no)
 		(uuid "2d73fbc9-09ab-4c36-a04e-52a27fd02562")
 		(property "Reference" "#PWR020"
-			(at 177.8 35.56 0)
+			(at 186.69 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3008,7 +3399,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 177.8 26.67 0)
+			(at 186.69 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3016,7 +3407,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 31.75 0)
+			(at 186.69 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3025,7 +3416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 31.75 0)
+			(at 186.69 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3034,7 +3425,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 177.8 31.75 0)
+			(at 186.69 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3046,7 +3437,7 @@
 			(uuid "da306fdf-3ab1-4a9f-80a4-e8865e74cfc0")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR020")
 					(unit 1)
@@ -3192,7 +3583,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 78.74 41.91 0)
+		(at 87.63 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3201,7 +3592,7 @@
 		(fields_autoplaced yes)
 		(uuid "399f81ca-58f5-425d-817c-e340ee0b67a4")
 		(property "Reference" "C24"
-			(at 81.28 40.6462 0)
+			(at 90.17 41.9162 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3210,7 +3601,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 81.28 43.1862 0)
+			(at 90.17 44.4562 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3219,7 +3610,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 41.91 0)
+			(at 87.63 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3228,7 +3619,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 78.74 41.91 0)
+			(at 87.63 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3237,7 +3628,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 78.74 41.91 0)
+			(at 87.63 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3252,7 +3643,7 @@
 			(uuid "072b5eb9-3290-4cdc-8d9d-d0aab1e4219d")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C24")
 					(unit 1)
@@ -3262,7 +3653,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 113.03 87.63 0)
+		(at 121.92 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3271,7 +3662,7 @@
 		(fields_autoplaced yes)
 		(uuid "4071bcd6-dcbe-4b76-85ba-00e982cb8dee")
 		(property "Reference" "C13"
-			(at 115.57 86.3662 0)
+			(at 124.46 87.6362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3280,7 +3671,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 115.57 88.9062 0)
+			(at 124.46 90.1762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3289,7 +3680,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 87.63 0)
+			(at 121.92 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3298,7 +3689,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 113.03 87.63 0)
+			(at 121.92 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3307,7 +3698,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 113.03 87.63 0)
+			(at 121.92 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3322,9 +3713,75 @@
 			(uuid "8353fce7-2c3d-4095-a0cf-47b243a0f771")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a42a2b4-d75a-40ba-b45c-760e0b0d25aa")
+		(property "Reference" "#PWR01"
+			(at 142.24 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 142.24 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57b467ca-f308-48c5-a2a4-f538d2a460d0")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -3788,7 +4245,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 187.96 43.18 0)
+		(at 196.85 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3797,7 +4254,7 @@
 		(fields_autoplaced yes)
 		(uuid "7a37d588-857a-47eb-aafa-c319a3b14398")
 		(property "Reference" "#PWR014"
-			(at 187.96 49.53 0)
+			(at 196.85 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3806,7 +4263,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 187.96 48.26 0)
+			(at 196.85 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3814,7 +4271,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 43.18 0)
+			(at 196.85 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3823,7 +4280,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 43.18 0)
+			(at 196.85 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3832,7 +4289,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 187.96 43.18 0)
+			(at 196.85 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3844,9 +4301,116 @@
 			(uuid "846c0063-9eb6-4e5d-b9c1-e9fca405a0cb")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:VSIN")
+		(at 29.21 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7be9e8ec-37ac-44fa-ab7a-0e46b95c7dda")
+		(property "Reference" "V1"
+			(at 33.02 59.5601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VSIN"
+			(at 33.02 62.1001 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Voltage source, sinusoidal"
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "dc=0 ampl=1 f=226 td=0 theta=0 phase=0 ac=1"
+			(at 33.02 64.6401 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Sim.Type" "SIN"
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 29.21 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "97afa26c-84ad-46d0-b411-28db7dc6378b")
+		)
+		(pin "2"
+			(uuid "1380becb-5d49-41ea-abe6-9e67b8c9c1ad")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "V1")
 					(unit 1)
 				)
 			)
@@ -3920,7 +4484,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 40.64 81.28 270)
+		(at 49.53 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3929,7 +4493,7 @@
 		(fields_autoplaced yes)
 		(uuid "7d3db311-78e1-49bb-a875-ed4d76a1fb9c")
 		(property "Reference" "R21"
-			(at 40.64 74.93 90)
+			(at 49.53 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3937,7 +4501,7 @@
 			)
 		)
 		(property "Value" "6.8K"
-			(at 40.64 77.47 90)
+			(at 49.53 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3945,7 +4509,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.386 82.296 90)
+			(at 49.276 83.566 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3954,7 +4518,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 40.64 81.28 0)
+			(at 49.53 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3963,7 +4527,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 40.64 81.28 0)
+			(at 49.53 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3978,7 +4542,7 @@
 			(uuid "f6c41202-8d65-45a4-8dfd-ec780d29cbb1")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R21")
 					(unit 1)
@@ -4124,7 +4688,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 187.96 36.83 0)
+		(at 196.85 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4133,7 +4697,7 @@
 		(fields_autoplaced yes)
 		(uuid "82cf9ede-51bd-41e1-985f-7c34ce6ba580")
 		(property "Reference" "C16"
-			(at 190.5 35.5662 0)
+			(at 199.39 36.8362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4142,7 +4706,7 @@
 			)
 		)
 		(property "Value" "1.0u"
-			(at 190.5 38.1062 0)
+			(at 199.39 39.3762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4151,7 +4715,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 36.83 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4160,7 +4724,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 36.83 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4169,7 +4733,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 187.96 36.83 0)
+			(at 196.85 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4184,7 +4748,7 @@
 			(uuid "d850198f-de93-4b3b-9edf-fbc40aae7544")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C16")
 					(unit 1)
@@ -4260,6 +4824,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 31.75 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e3c5762-8fa8-4e63-a023-7de814dedf49")
+		(property "Reference" "#PWR09"
+			(at 31.75 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 31.75 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 31.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2de75c04-8963-4cec-9b12-c3ade733eaee")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 123.19 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4326,7 +4956,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 114.3 58.42 270)
+		(at 123.19 59.69 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4335,7 +4965,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f961a27-548e-4028-a539-79dc45e955c6")
 		(property "Reference" "C21"
-			(at 114.2936 52.07 90)
+			(at 123.1836 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4343,7 +4973,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 114.2936 54.61 90)
+			(at 123.1836 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4351,7 +4981,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 114.3 58.42 0)
+			(at 123.19 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4360,7 +4990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 58.42 0)
+			(at 123.19 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4369,7 +4999,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 114.3 58.42 0)
+			(at 123.19 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4384,7 +5014,7 @@
 			(uuid "d9d8768e-c06f-44a5-b72a-1678028ca73c")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C21")
 					(unit 1)
@@ -4394,7 +5024,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 194.31 73.66 0)
+		(at 203.2 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4403,7 +5033,7 @@
 		(fields_autoplaced yes)
 		(uuid "a3f3aa74-d494-4505-9ed8-4f417a3bc9f9")
 		(property "Reference" "C25"
-			(at 196.85 72.3962 0)
+			(at 205.74 73.6662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4412,7 +5042,7 @@
 			)
 		)
 		(property "Value" "1.0 u"
-			(at 196.85 74.9362 0)
+			(at 205.74 76.2062 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4421,7 +5051,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 73.66 0)
+			(at 203.2 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4430,7 +5060,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 194.31 73.66 0)
+			(at 203.2 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4439,7 +5069,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 194.31 73.66 0)
+			(at 203.2 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4454,7 +5084,7 @@
 			(uuid "ca06cf14-2831-4a3d-b433-832150c23e11")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C25")
 					(unit 1)
@@ -4464,7 +5094,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 96.52 0)
+		(at 60.96 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4473,7 +5103,7 @@
 		(fields_autoplaced yes)
 		(uuid "a7334842-04e6-4a91-a2ac-ca6007d4eea0")
 		(property "Reference" "#PWR09"
-			(at 52.07 102.87 0)
+			(at 60.96 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4482,7 +5112,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 52.07 101.6 0)
+			(at 60.96 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4490,7 +5120,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 96.52 0)
+			(at 60.96 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4499,7 +5129,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 96.52 0)
+			(at 60.96 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4508,7 +5138,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 96.52 0)
+			(at 60.96 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4520,7 +5150,7 @@
 			(uuid "60f4457b-d049-4b67-b8de-4ed0a9d78d62")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR09")
 					(unit 1)
@@ -4598,7 +5228,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 52.07 59.69 0)
+		(at 60.96 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4607,7 +5237,7 @@
 		(fields_autoplaced yes)
 		(uuid "ad887349-2876-44d5-95cd-6e32c7415fe1")
 		(property "Reference" "C28"
-			(at 54.61 58.4262 0)
+			(at 63.5 59.6962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4616,7 +5246,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 54.61 60.9662 0)
+			(at 63.5 62.2362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4625,7 +5255,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 59.69 0)
+			(at 60.96 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4634,7 +5264,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 52.07 59.69 0)
+			(at 60.96 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4643,7 +5273,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 52.07 59.69 0)
+			(at 60.96 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4658,7 +5288,7 @@
 			(uuid "5dbd167b-99c6-4b59-b660-e33fa16ad2e2")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C28")
 					(unit 1)
@@ -4668,7 +5298,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 46.99 0)
+		(at 87.63 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4677,7 +5307,7 @@
 		(fields_autoplaced yes)
 		(uuid "addd89f2-fa6c-4558-86a4-b7695e66e9dd")
 		(property "Reference" "#PWR011"
-			(at 78.74 53.34 0)
+			(at 87.63 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4686,7 +5316,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 52.07 0)
+			(at 87.63 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4694,7 +5324,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 46.99 0)
+			(at 87.63 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4703,7 +5333,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 46.99 0)
+			(at 87.63 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4712,7 +5342,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 46.99 0)
+			(at 87.63 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4724,7 +5354,7 @@
 			(uuid "10d17ab3-7c00-425f-9d10-85075d282cf6")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR011")
 					(unit 1)
@@ -4734,7 +5364,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 85.09 87.63 0)
+		(at 93.98 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4743,7 +5373,7 @@
 		(fields_autoplaced yes)
 		(uuid "b0f1dc36-8e7f-4766-9cc2-bfd99d1f5d0c")
 		(property "Reference" "C12"
-			(at 87.63 86.3662 0)
+			(at 96.52 87.6362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4752,7 +5382,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 87.63 88.9062 0)
+			(at 96.52 90.1762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4761,7 +5391,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 87.63 0)
+			(at 93.98 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4770,7 +5400,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 85.09 87.63 0)
+			(at 93.98 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4779,7 +5409,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 85.09 87.63 0)
+			(at 93.98 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4794,9 +5424,75 @@
 			(uuid "37043d9d-dfec-41d9-b6ce-616032ba6e33")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 142.24 20.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b28750bb-64f5-4a85-b2e0-816ce319bd64")
+		(property "Reference" "#PWR010"
+			(at 142.24 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 142.24 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 142.24 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18927d33-37b8-4f93-bbb9-fcf92557489f")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -4911,7 +5607,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 71.12 87.63 0)
+		(at 80.01 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4920,7 +5616,7 @@
 		(fields_autoplaced yes)
 		(uuid "b822d703-9049-439d-b8ee-5fa9826f5338")
 		(property "Reference" "R70"
-			(at 73.66 86.3599 0)
+			(at 82.55 87.6299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4929,7 +5625,7 @@
 			)
 		)
 		(property "Value" "6.98K"
-			(at 73.66 88.8999 0)
+			(at 82.55 90.1699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4938,7 +5634,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 72.136 87.884 90)
+			(at 81.026 89.154 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4947,7 +5643,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 71.12 87.63 0)
+			(at 80.01 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4956,7 +5652,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 71.12 87.63 0)
+			(at 80.01 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4971,7 +5667,7 @@
 			(uuid "5b96b85b-c1b4-488b-918b-fda515369702")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R70")
 					(unit 1)
@@ -4981,7 +5677,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 144.78 73.66 0)
+		(at 153.67 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4989,7 +5685,7 @@
 		(dnp no)
 		(uuid "bb3f7231-c26d-49fd-80a7-9dc9d6d2db65")
 		(property "Reference" "#PWR019"
-			(at 144.78 77.47 0)
+			(at 153.67 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4998,7 +5694,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 144.78 68.58 0)
+			(at 153.67 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5006,7 +5702,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 73.66 0)
+			(at 153.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5015,7 +5711,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 73.66 0)
+			(at 153.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5024,7 +5720,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 144.78 73.66 0)
+			(at 153.67 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5036,7 +5732,7 @@
 			(uuid "4279ca22-80a8-40fe-a0ad-b1731c26cf39")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR019")
 					(unit 1)
@@ -5045,17 +5741,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 144.78 92.71 0)
+		(lib_id "Simulation_SPICE:VDC")
+		(at 142.24 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bd4a6d25-8222-4814-a740-3059020b2757")
-		(property "Reference" "R24"
-			(at 147.32 91.4399 0)
+		(uuid "bb710aa6-e393-438d-b094-08287d22f269")
+		(property "Reference" "V1"
+			(at 146.05 24.0001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5063,8 +5759,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1.5K"
-			(at 147.32 93.9799 0)
+		(property "Value" "3.3"
+			(at 146.05 26.5401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5073,7 +5769,105 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 145.796 92.964 90)
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Voltage source, DC"
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 142.24 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a0618cb7-80e6-43e1-a86a-e32e3c66c651")
+		)
+		(pin "1"
+			(uuid "b0721e46-5ffa-4c30-acba-03e1e4d5ec93")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "V1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 153.67 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd4a6d25-8222-4814-a740-3059020b2757")
+		(property "Reference" "R24"
+			(at 156.21 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1.5K"
+			(at 156.21 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.686 94.234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5082,7 +5876,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 92.71 0)
+			(at 153.67 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5091,7 +5885,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 144.78 92.71 0)
+			(at 153.67 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5106,7 +5900,7 @@
 			(uuid "affc9564-0a26-4f45-ad4f-c0ae333d9a98")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R24")
 					(unit 1)
@@ -5182,7 +5976,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 127 81.28 270)
+		(at 135.89 82.55 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5191,7 +5985,7 @@
 		(fields_autoplaced yes)
 		(uuid "be4eebff-d660-45a7-8a15-1672f11f38b7")
 		(property "Reference" "R20"
-			(at 127 74.93 90)
+			(at 135.89 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5199,7 +5993,7 @@
 			)
 		)
 		(property "Value" "0"
-			(at 127 77.47 90)
+			(at 135.89 78.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5207,7 +6001,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 126.746 82.296 90)
+			(at 135.636 83.566 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5216,7 +6010,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 127 81.28 0)
+			(at 135.89 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5225,7 +6019,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 127 81.28 0)
+			(at 135.89 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5240,7 +6034,7 @@
 			(uuid "7282c957-9117-47bc-bdb6-26649fcd359a")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R20")
 					(unit 1)
@@ -5250,7 +6044,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Audio:LM4810")
-		(at 177.8 63.5 0)
+		(at 186.69 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5259,7 +6053,7 @@
 		(fields_autoplaced yes)
 		(uuid "c4d6fb2d-529f-4359-b448-eaab485f51e3")
 		(property "Reference" "U1"
-			(at 179.9433 48.26 0)
+			(at 188.8333 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5268,7 +6062,7 @@
 			)
 		)
 		(property "Value" "LM4810"
-			(at 179.9433 50.8 0)
+			(at 188.8333 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5277,7 +6071,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-8_3x3mm_P0.65mm"
-			(at 177.8 63.5 0)
+			(at 186.69 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5287,7 +6081,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm4810.pdf"
-			(at 177.8 63.5 0)
+			(at 186.69 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5296,7 +6090,7 @@
 			)
 		)
 		(property "Description" "Boomer Dual 105mW Headphone Amplifier with Active-High Shutdown Mode, VSSOP-8"
-			(at 177.8 63.5 0)
+			(at 186.69 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5329,7 +6123,7 @@
 			(uuid "f11e7d18-bc1c-4d97-b8e2-ea6760d46cec")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "U1")
 					(unit 1)
@@ -5339,7 +6133,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 66.04 0)
+		(at 60.96 67.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5348,7 +6142,7 @@
 		(fields_autoplaced yes)
 		(uuid "d41c7500-0643-4f8c-acd2-cc39be8c86e7")
 		(property "Reference" "#PWR010"
-			(at 52.07 72.39 0)
+			(at 60.96 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5357,7 +6151,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 52.07 71.12 0)
+			(at 60.96 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5365,7 +6159,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 66.04 0)
+			(at 60.96 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5374,7 +6168,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 66.04 0)
+			(at 60.96 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5383,7 +6177,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 66.04 0)
+			(at 60.96 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5395,7 +6189,7 @@
 			(uuid "21fed026-9032-4cc1-b655-a3e453d0541c")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR010")
 					(unit 1)
@@ -5404,8 +6198,115 @@
 		)
 	)
 	(symbol
+		(lib_id "Simulation_SPICE:VPWL")
+		(at 31.75 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d8c7d86d-c185-420d-8f0d-eff8affeba81")
+		(property "Reference" "V3"
+			(at 35.56 84.9601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VPWL"
+			(at 35.56 87.5001 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Voltage source, piece-wise linear"
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "pwl=\"0 -1 50n -1 51n 0 97n 1 171n -1 200n -1\""
+			(at 35.56 90.0401 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Sim.Type" "PWL"
+			(at 31.75 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cda0d3e8-40ff-441b-9bc5-f6632b2526eb")
+		)
+		(pin "2"
+			(uuid "44b8f762-aece-4360-b9bd-160b3763d6ca")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "V3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 87.63 69.85 0)
+		(at 96.52 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5414,7 +6315,7 @@
 		(fields_autoplaced yes)
 		(uuid "da4eb2f2-b883-4d0a-bb7c-fce56581049e")
 		(property "Reference" "#PWR017"
-			(at 87.63 76.2 0)
+			(at 96.52 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5423,7 +6324,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 87.63 74.93 0)
+			(at 96.52 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5431,7 +6332,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 87.63 69.85 0)
+			(at 96.52 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5440,7 +6341,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 87.63 69.85 0)
+			(at 96.52 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5449,7 +6350,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 87.63 69.85 0)
+			(at 96.52 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5461,7 +6362,7 @@
 			(uuid "c3e485d8-930f-4e5c-b07d-c3ed9d1db8b7")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR017")
 					(unit 1)
@@ -5539,7 +6440,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 78.74 33.02 0)
+		(at 87.63 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5547,7 +6448,7 @@
 		(dnp no)
 		(uuid "dfc56e71-0c25-433b-b9c9-a2ca4c7d08e0")
 		(property "Reference" "#PWR018"
-			(at 78.74 36.83 0)
+			(at 87.63 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5556,7 +6457,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 78.74 27.94 0)
+			(at 87.63 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5564,7 +6465,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 33.02 0)
+			(at 87.63 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5573,7 +6474,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 33.02 0)
+			(at 87.63 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5582,7 +6483,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 78.74 33.02 0)
+			(at 87.63 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5594,7 +6495,7 @@
 			(uuid "291750a8-7e42-4061-91c6-f8437b1430f7")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR018")
 					(unit 1)
@@ -5604,7 +6505,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 99.06 87.63 0)
+		(at 107.95 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5613,7 +6514,7 @@
 		(fields_autoplaced yes)
 		(uuid "e538c3f9-703d-433d-854d-bce671c826ab")
 		(property "Reference" "C11"
-			(at 101.6 86.3662 0)
+			(at 110.49 87.6362 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5622,7 +6523,7 @@
 			)
 		)
 		(property "Value" "0.1u"
-			(at 101.6 88.9062 0)
+			(at 110.49 90.1762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5631,7 +6532,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 87.63 0)
+			(at 107.95 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5640,7 +6541,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 99.06 87.63 0)
+			(at 107.95 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5649,7 +6550,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 99.06 87.63 0)
+			(at 107.95 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5664,7 +6565,7 @@
 			(uuid "2784c277-9906-4365-9cbf-504ea6472797")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "C11")
 					(unit 1)
@@ -5673,8 +6574,74 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 29.21 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eee5dca9-3856-4935-959a-50bb79118ee8")
+		(property "Reference" "#PWR01"
+			(at 29.21 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 29.21 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 29.21 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9dc00cc8-1ac2-436e-acad-4bbea7ab7f7c")
+		)
+		(instances
+			(project "audio_and_microphone"
+				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
-		(at 40.64 55.88 270)
+		(at 49.53 57.15 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5683,7 +6650,7 @@
 		(fields_autoplaced yes)
 		(uuid "f305265f-9e6c-4f5b-b9a8-0c634046b11c")
 		(property "Reference" "R37"
-			(at 40.64 49.53 90)
+			(at 49.53 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5691,7 +6658,7 @@
 			)
 		)
 		(property "Value" "6.8K"
-			(at 40.64 52.07 90)
+			(at 49.53 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5699,7 +6666,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.386 56.896 90)
+			(at 49.276 58.166 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5708,7 +6675,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 40.64 55.88 0)
+			(at 49.53 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5717,7 +6684,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 40.64 55.88 0)
+			(at 49.53 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5732,7 +6699,7 @@
 			(uuid "2ee0346b-5eff-4a99-8e55-7597700e0181")
 		)
 		(instances
-			(project ""
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "R37")
 					(unit 1)
@@ -5742,7 +6709,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 194.31 80.01 0)
+		(at 203.2 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5751,7 +6718,7 @@
 		(fields_autoplaced yes)
 		(uuid "f8f13353-5be0-41ae-872d-858e312e01c6")
 		(property "Reference" "#PWR015"
-			(at 194.31 86.36 0)
+			(at 203.2 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5760,7 +6727,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 194.31 85.09 0)
+			(at 203.2 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5768,7 +6735,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 194.31 80.01 0)
+			(at 203.2 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5777,7 +6744,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 80.01 0)
+			(at 203.2 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5786,7 +6753,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 194.31 80.01 0)
+			(at 203.2 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5798,7 +6765,7 @@
 			(uuid "14e5d8b9-1ea4-496c-91b5-47e9c417dfda")
 		)
 		(instances
-			(project "Tympanometer_audio_and_microphone"
+			(project "audio_and_microphone"
 				(path "/6041ce46-c287-4741-ac80-b7b1d4df1348"
 					(reference "#PWR015")
 					(unit 1)
