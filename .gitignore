@@ -3,7 +3,9 @@ build/
 .west/
 .DS_Store
 
-
-# Ignore KiCad backup folders (e.g. audio_and_microphone-backups/)
+# KiCad backup and temporary files
 *-backups/
-
+*.lck
+*.wbk
+_autosave-*
+\#auto_saved_files#
