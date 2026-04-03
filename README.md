@@ -1,6 +1,6 @@
 # Tympanometer
 
-A low-cost tympanometer designed to diagnose hearing loss in children, developed as part of the [Duke BME Design Fellows](https://bme.duke.edu/academics/undergrad/design-fellows/) program at Duke University's Pratt School of Engineering under the supervision of Dr. Mark Palmeri, MD PhD.
+A low-cost tympanometer designed to diagnose hearing loss in children, developed as part of the [Duke BME Design Fellows](https://bme.duke.edu/academics/undergrad/design-fellows/) program at Duke University's Pratt School of Engineering under the supervision of [Dr. Mark Palmeri, MD PhD](https://github.com/mlp6).
 
 - [Duke BME Designers Develop a New Tool to Inexpensively Diagnose Hearing Loss in Children](https://pratt.duke.edu/news/duke-bme-designers-develop-a-new-tool-to-inexpensively-diagnose-hearing-loss-in-children/)
 - [Preventing Childhood Hearing Loss Worldwide](https://pratt.duke.edu/news/preventing-childhood-hearing-loss-worldwide/)
