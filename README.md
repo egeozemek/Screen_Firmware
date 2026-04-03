@@ -11,7 +11,7 @@ A low-cost tympanometer designed to diagnose hearing loss in children, developed
 
 **Iris Ye** · **Alisha Gupta** · **James Mu**
 
-![Team](assets/team.jpg)
+<img src="assets/team.jpg" width="250"/>
 
 
 ---
