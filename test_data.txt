@@ -1,0 +1,10 @@
+Pressure: -417|-384|-351|-319|-290|-261|-227|-194|-165|-137|-109|-82|-56|-32|-7|17|42|69|98|124|147|172|172
+Compliance: 0.4|0.46|0.43|0.46|0.46|0.5|0.5|0.53|0.57|0.6|0.7|0.77|0.87|0.97|0.97|0.9|0.7|0.67|0.53|0.46|0.5|0.5|0.5
+
+Full array data for spice simulation Alisha Gupta Iris Ye: 
+Pressure: -417|-384|-351|-319|-290|-261|-227|-194|-165|-137|-109|-82|-56|-32|-7|17|42|69|98|124|147|172|172
+Compliance: 0.4|0.46|0.43|0.46|0.46|0.5|0.5|0.53|0.57|0.6|0.7|0.77|0.87|0.97|0.97|0.9|0.7|0.67|0.53|0.46|0.5|0.5|0.5
+each point would be (pressure, compliance) ie first point would be (-417, 0.4), (-384,0.46), etc. 
+the plot below is the trace for this specific ear (this is smoothed so probably won't look as clean but you can use this as a general reference for what the shape should be) 
+This is a pretty standard type A. 
+Screenshot 2026-01-23 at 11.40.55 PM.png

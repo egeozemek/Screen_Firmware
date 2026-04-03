@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "LM4875MM")(type "KiCad")(uri "/Users/jamesmu/Downloads/LM4875MM_NOPB/LM4875MM.kicad_sym")(options "")(descr ""))
+)
