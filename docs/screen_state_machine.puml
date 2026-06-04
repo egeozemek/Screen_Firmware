@@ -1,0 +1,55 @@
+@startuml
+title mHealth Tympanometer - Screen State Machine
+
+' --- styling ---
+skinparam shadowing false
+skinparam linetype ortho
+skinparam ranksep 55
+skinparam nodesep 35
+skinparam defaultFontName Helvetica
+skinparam state {
+  BackgroundColor #F6F6F6
+  BorderColor #444444
+  FontColor #111111
+  ArrowColor #555555
+  ArrowFontColor #333333
+}
+hide empty description
+
+' --- states ---
+state "1 - Boot / Self-test"       as Boot
+state "2 - Ready"                  as Ready
+state "3 - Seeking Seal"           as Seal
+state "4 - Measuring (screen OFF)" as Meas
+state "5 - Results"                as Results
+state "6 - Re-arm"                 as Rearm
+state "7 - Session Summary"        as Summary
+state "8 - Warning"                as Warn
+state "9 - Error (fatal)"          as Error
+state "10 - Sleep / Dim"           as Sleep
+
+' --- main vertical happy path (top -> bottom) ---
+[*]     -down->  Boot
+Boot    -down->  Ready    : all interfaces OK
+Ready   -down->  Seal     : trigger press
+Seal    -down->  Meas     : seal >= 20 daPa
+Meas    -down->  Results  : sweep done
+Results -down->  Rearm    : auto-delay / trigger
+Rearm   -down->  Summary  : both ears done
+Summary -left->  Ready    : next patient
+Rearm   -left->  Seal     : other ear pending
+
+' --- side branches (kept off the spine) ---
+Boot    -right-> Error    : interface fails
+Error   -up->    Boot     : button restarts
+Ready   -right-> Sleep    : 5 min idle
+Sleep   -up->    Ready    : button press
+Seal    -right-> Warn     : seal timeout 5 s
+Meas    -right-> Warn     : pressure-inc timeout
+Warn    -left->  Ready    : aborts (ble_tx -> idle)
+
+' --- notes (single-line to avoid widening the graph) ---
+note right of Meas : Screen OFF; safety LED pulses.\nKeeps OLED charge-pump noise off the mic.
+note left of Results : Curve pinned. Stat cell auto-pages\nType / Conf / ECV / SA / TPP every 2-3 s.
+
+@enduml
