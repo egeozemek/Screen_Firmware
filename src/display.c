@@ -196,3 +196,38 @@ void display_show_state(enum display_state state)
 	}
 }
 
+void display_advance_page(void)
+{
+	results_page ^= 1;     /* toggle 0 <-> 1 */
+	render_results();      /* redraw with the new page */
+}
+
+static void page_work_handler(struct k_work *work)
+{
+	display_advance_page();          /* SPI happens here, in thread context - safe */
+}
+static K_WORK_DEFINE(page_work, page_work_handler);
+
+static void page_timer_expiry(struct k_timer *t)
+{
+	k_work_submit(&page_work);        /* interrupt context: just hand off the job */
+}
+static K_TIMER_DEFINE(page_timer, page_timer_expiry, NULL);
+
+void display_show_tymp(const struct tymp_results *res)
+{
+	cur = *res;
+	results_page = 0;
+	render_results();
+	k_timer_start(&page_timer, K_MSEC(RESULTS_PAGE_MS), K_MSEC(RESULTS_PAGE_MS));
+}
+
+void display_show_state(enum display_state state)
+{
+	if (state != DISPLAY_RESULTS)
+		k_timer_stop(&page_timer);
+	switch (state) {
+	/* ... your cases ... */
+	}
+}
+
