@@ -103,4 +103,96 @@ void display_show_tymp(const struct tymp_results *res) {
 
 }
 
+static void glyph57(int x, int y, char c, int sx, int sy) {
+    const uint8_t *g = font57_lookup(c);
+    if (!g) return;
+    for (int col = 0; col <5; col++) {
+        uint8_t b = g[col];
+        for (int row = 0; row < 7; row++)
+            if (b & (1 << row))
+                for (int dy = 0; dy < sy; dy++)
+                    for (int dx = 0; dx < sx; dx++)
+                        setpx(x + col * sx + dx, y + row * sy + dy);
+        }
+}
+
+static int text57(int x, int y, const char *s, int sx)
+{
+	for (; *s; s++) { glyph57(x, y, *s, sx, sx); x += 6 * sx; }   /* 5 wide + 1 gap */
+	return x;
+}
+
+static void ctext57(int y, const char *s, int sx)   /* horizontally centered */
+{
+	int w = 0; for (const char *p = s; *p; p++) w += 6 * sx;
+	text57((DISPLAY_W - w) / 2, y, s, sx);
+}
+
+static void draw_battery(int x, int y, int pct)
+{
+	hline(x, x+10, y); hline(x, x+10, y+6);      /* top & bottom */
+	vline(x, y, y+6);  vline(x+10, y, y+6);      /* sides        */
+	vline(x+11, y+2, y+4);                        /* the + nub    */
+	int bars = (pct * 3 + 50) / 100;             /* 0..3 fill bars */
+	for (int b = 0; b < bars; b++)
+		for (int xx = x+2+b*3; xx < x+4+b*3; xx++) vline(xx, y+2, y+4);
+}
+
+static void draw_check(int x, int y)   /* a little ✓ */
+{
+	setpx(x+4,y); setpx(x+3,y+1); setpx(x,y+2); setpx(x+2,y+2);
+	setpx(x+1,y+3); setpx(x+2,y+4);
+}
+
+static void render_ready(void)
+{
+	memset(fb, 0, sizeof(fb));
+	draw_battery(2, 4, batt_pct);          /* status bar: battery */
+	draw_ble(22, 3);                       /* status bar: BLE     */
+	glyph(118, 4, cur_ear, 1, 1);          /* status bar: L/R     */
+	ctext57(24, "INSERT EAR TIP", 1);
+	ctext57(38, "PRESS TO START", 1);
+	flush();
+}
+
+static void render_boot(void)
+{
+	static const char *items[] = { "DISP", "MIC", "PRES", "MOTOR", "BLE" };
+	memset(fb, 0, sizeof(fb));
+	ctext57(2, "SELF TEST", 1);
+	for (int i = 0; i < 5; i++) {
+		int yy = 14 + i*10;
+		text57(6, yy, items[i], 1);
+		if (post_ok[i]) draw_check(70, yy+1);   /* tick once that interface passes */
+	}
+	flush();
+}
+
+static void render_error(void)
+{
+	memset(fb, 0, sizeof(fb));
+	draw_x(57, 4);
+	ctext57(24, "SENSOR ERROR", 1);
+	ctext57(44, "PRESS TO RESTART", 1);
+	flush();
+}
+
+static void render_measuring(void) { display_blank(); }
+static void render_sleep(void)     { display_blank(); }
+
+void display_show_state(enum display_state state)
+{
+	switch (state) {
+	case DISPLAY_BOOT:         render_boot();         break;
+	case DISPLAY_READY:        render_ready();        break;
+	case DISPLAY_SEEKING_SEAL: render_seeking_seal(); break;
+	case DISPLAY_MEASURING:    render_measuring();    break;   /* blanks */
+	case DISPLAY_RESULTS:      render_results();      break;   /* uses cur from display_show_tymp */
+	case DISPLAY_REARM:        render_rearm();        break;
+	case DISPLAY_SUMMARY:      render_summary();      break;
+	case DISPLAY_WARNING:      render_warning();      break;
+	case DISPLAY_ERROR:        render_error();        break;
+	case DISPLAY_SLEEP:        render_sleep();        break;   /* blanks */
+	}
+}
 
