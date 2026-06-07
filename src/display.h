@@ -40,6 +40,13 @@
 /* Paging */
 #define RESULTS_PAGE_MS      2500
 
+/* Level Screen Geometry */
+#define LEVEL_CX 		   64
+#define LEVEL_CY 		   36
+#define LEVEL_R 		   16
+#define LEVEL_TOL 	   	   6
+#define LEVEL_FLAT_DEG     3
+
 struct tymp_point {
 	int16_t pressure_dapa;     /* -400 .. +200 */
 	int16_t admittance_x100;   /* 0.01 mL units */
@@ -59,7 +66,7 @@ struct tymp_results {
 enum display_state {
 	DISPLAY_BOOT, DISPLAY_READY, DISPLAY_SEEKING_SEAL, DISPLAY_MEASURING,
 	DISPLAY_RESULTS, DISPLAY_REARM, DISPLAY_SUMMARY, DISPLAY_WARNING,
-	DISPLAY_ERROR, DISPLAY_SLEEP,
+	DISPLAY_ERROR, DISPLAY_SLEEP, DISPLAY_LEVEL,
 };
 
 int  display_init(void);
@@ -71,5 +78,6 @@ void display_blank(void);
 void display_set_battery(int pct);
 void display_set_ear(char lr);          /* 'L' or 'R' */
 void display_set_post(int index, bool ok);
+void display_set_angle(int x_deg, int y_deg);
 
 #endif
