@@ -15,6 +15,8 @@ static int results_page; // global variable to track which page of results we're
 static struct tymp_results res_left, res_right; // global variables to hold the left and right ear results, so that we can display them when we have them both. I didn't use pointers, to make sure the memory doesn't have to stay valid forever.
 static bool have_left, have_right; // global variables to track whether we have the left and right ear results, so that we know when to display them.
 
+static int tilt_x_deg, tilt_y_deg; // global variables to hold the current tilt of the device, which will affect the display during seeking seal
+static int isqrt(int v) { int r = 0; while ((r+1)*(r+1) <= v) r++; return r; }
 static int batt_pct = 100; // global variable for battery percentage, initialized to 100%
 static char cur_ear = 'L'; // global variable for current ear, initialized to 'L'
 static bool post_ok[5]; // global variable for POST results
@@ -157,6 +159,17 @@ static void ctext57(int y, const char *s, int sx)
 	text57((DISPLAY_W - w) / 2, y, s, sx);
 }
 
+static void circle(int cx, int cy, int r) {
+	int x = r, y = 0, err = 1 - r;
+	while (x >= y) {
+		setpx(cx+x,cy+y); setpx(cx+y,cy+x); setpx(cx-x,cy+y); setpx(cx-y,cy+x);
+		setpx(cx-x,cy-y); setpx(cx-y,cy-x); setpx(cx+x,cy-y); setpx(cx+y,cy-x);
+		y++;
+		if (err < 0) err += 2*y + 1;
+		else { x--; err += 2*(y - x) + 1; }
+	}
+}
+
 static void draw_battery(int x, int y, int pct)
 {
 	hline(x, x+10, y); hline(x, x+10, y+6);
@@ -166,6 +179,14 @@ static void draw_battery(int x, int y, int pct)
 	for (int b = 0; b < bars; b++)
 		for (int xx = x+2+b*3; xx < x+4+b*3; xx++) vline(xx, y+2, y+4);
 }
+
+static void disc(int cx, int cy, int r)          /* filled disc */
+{
+	for (int yy = -r; yy <= r; yy++)
+		for (int xx = -r; xx <= r; xx++)
+			if (xx*xx + yy*yy <= r*r) setpx(cx+xx, cy+yy);
+}
+
 static const char *ble_rows[9] = {
 	"..#..","..##.","#.#.#",".###.","..#..",".###.","#.#.#","..##.","..#.."
 };
@@ -394,6 +415,7 @@ static void render_warning(void)
 void display_set_battery(int pct)         { batt_pct = pct; }
 void display_set_ear(char lr)             { cur_ear = lr; }
 void display_set_post(int index, bool ok) { if (index >= 0 && index < 5) post_ok[index] = ok; }
+void display_set_angle(int x_deg, int y_deg) { tilt_x_deg = x_deg; tilt_y_deg = y_deg; }
 
 void display_advance_page(void)
 {
@@ -411,6 +433,31 @@ static void page_timer_expiry(struct k_timer *t)
 {
 	k_work_submit(&page_work);        /* interrupt context: just hand off the job */
 }
+
+static void render_level(void)
+{
+	memset(fb, 0, sizeof(fb));
+
+	int mag = isqrt(tilt_x_deg*tilt_x_deg + tilt_y_deg*tilt_y_deg);
+	char buf[8]; int i = 0; i += uint_to_str(buf + i, mag); buf[i] = 0;
+	int rx = text57(2, 1, buf, 1);
+	circle(rx + 1, 2, 1);                          /* tiny degree symbol */
+
+	for (int x = LEVEL_CX-LEVEL_R; x <= LEVEL_CX+LEVEL_R; x += 2) setpx(x, LEVEL_CY);
+	for (int y = LEVEL_CY-LEVEL_R; y <= LEVEL_CY+LEVEL_R; y += 2) setpx(LEVEL_CX, y);
+	circle(LEVEL_CX, LEVEL_CY, LEVEL_R);
+	circle(LEVEL_CX, LEVEL_CY, LEVEL_TOL);
+
+	int lim = LEVEL_R - 2;
+	int ox = tilt_x_deg;  if (ox >  lim) ox =  lim; if (ox < -lim) ox = -lim;
+	int oy = -tilt_y_deg; if (oy >  lim) oy =  lim; if (oy < -lim) oy = -lim;
+
+	if (mag <= LEVEL_FLAT_DEG) disc(LEVEL_CX, LEVEL_CY, LEVEL_TOL-1);  /* level: fill */
+	else                       disc(LEVEL_CX+ox, LEVEL_CY+oy, 4);      /* bubble       */
+
+	flush();
+}
+
 static K_TIMER_DEFINE(page_timer, page_timer_expiry, NULL);
 
 void display_show_state(enum display_state state)
