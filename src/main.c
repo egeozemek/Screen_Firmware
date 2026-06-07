@@ -32,7 +32,7 @@ int main(void)
 	if (display_init() != 0)
 		return -1;                 /* panel not ready - bail */
 
-	struct tymp_results left, right;
+	static struct tymp_results left, right;
 	make_demo(&left,  "A", 'L', 92, 11, 65,    0,    0, 65, 10, 50);  /* Type A */
 	make_demo(&right, "C", 'R', 90, 11, 55, -150, -150, 55, 10, 50);  /* Type C */
 

@@ -209,14 +209,16 @@ void display_blank(void) {
     display_blanking_on(disp); // turn off the display. this is what measuring and sleep modes will call to save power
 }
  
-static void flush(void) {
-    struct display_buffer_descriptor desc = { // describe the framebuffer for the display driver
-        .buf_size = sizeof(fb),
-        .width = DISPLAY_W,
-        .height = DISPLAY_H,
-        .pitch = DISPLAY_W, // number of bytes per row
-    };
-    display_write(disp, 0, 0, &desc, fb); // write the framebuffer to the display 
+static void flush(void)
+{
+	display_blanking_off(disp);          /* panel on whenever we draw */
+	struct display_buffer_descriptor desc = {
+		.buf_size = sizeof(fb),
+		.width    = DISPLAY_W,
+		.height   = DISPLAY_H,
+		.pitch    = DISPLAY_W,
+	};
+	display_write(disp, 0, 0, &desc, fb);
 }
 
 static void draw_pinned(void) {
