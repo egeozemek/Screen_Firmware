@@ -3,6 +3,8 @@
 #include <zephyr/device.h> // device binding macros
 #include <zephyr/drivers/display.h> // display driver API
 #include <string.h> // memset, strcpy
+#include <stdint.h>
+#include <stdbool.h>
 
 static const struct device *disp; // global variable for the display device
 static uint8_t fb[DISPLAY_W * DISPLAY_H / 8]; // framebuffer for the display, 1 bit per pixel
@@ -212,18 +214,9 @@ static void flush(void) {
         .buf_size = sizeof(fb),
         .width = DISPLAY_W,
         .height = DISPLAY_H,
-        .pitch = DISPLAY_W / 8, // number of bytes per row
+        .pitch = DISPLAY_W, // number of bytes per row
     };
     display_write(disp, 0, 0, &desc, fb); // write the framebuffer to the display 
-}
-
-static void render_results(void) {
-    memset(fb, 0, sizeof(fb));
-    draw_pinned(); // draw the pinned values on the current page, so that they update when we switch pages
-    draw_page(); // draw the page number on the current page, so that it updates when we switch pages
-    draw_curve(); // draw the curve on the current page, so that it updates when we switch pages
-    draw_page_dots(); // draw the dots on the current page, so that they update when we switch pages
-    flush(); // update the display with the new framebuffer
 }
 
 static void draw_pinned(void) {
@@ -242,7 +235,7 @@ static void draw_page(void) {
         text(SA_X, STAT_LABEL_Y, "SA", 1, 1);
         decN(SA_X, STAT_VALUE_Y, cur.sa_x100, 2, 2, 2);
         text(TPP_X, STAT_LABEL_Y, "TPP", 1, 1);
-        decN(TPP_X, STAT_VALUE_Y, cur.tpp_dapa, 2, 2);
+        num(TPP_X, STAT_VALUE_Y, cur.tpp_dapa, 2, 2);
         }
 }
 
@@ -281,40 +274,15 @@ static void draw_page_dots(void) {
     draw_dot(DOT2_X, DOT_Y, results_page == 1);
 }
 
-void display_show_tymp(const struct tymp_results *res) {  
-    cur = *res;
-    results_page = 0;
-    render_results();
-
+static void render_results(void) {
+    memset(fb, 0, sizeof(fb));
+    draw_pinned(); // draw the pinned values on the current page, so that they update when we switch pages
+    draw_page(); // draw the page number on the current page, so that it updates when we switch pages
+    draw_curve(); // draw the curve on the current page, so that it updates when we switch pages
+    draw_page_dots(); // draw the dots on the current page, so that they update when we switch pages
+    flush(); // update the display with the new framebuffer
 }
 
-static int text57(int x, int y, const char *s, int sx)
-{
-	for (; *s; s++) { glyph57(x, y, *s, sx, sx); x += 6 * sx; }   /* 5 wide + 1 gap */
-	return x;
-}
-
-static void ctext57(int y, const char *s, int sx)   /* horizontally centered */
-{
-	int w = 0; for (const char *p = s; *p; p++) w += 6 * sx;
-	text57((DISPLAY_W - w) / 2, y, s, sx);
-}
-
-static void draw_battery(int x, int y, int pct)
-{
-	hline(x, x+10, y); hline(x, x+10, y+6);      /* top & bottom */
-	vline(x, y, y+6);  vline(x+10, y, y+6);      /* sides        */
-	vline(x+11, y+2, y+4);                        /* the + nub    */
-	int bars = (pct * 3 + 50) / 100;             /* 0..3 fill bars */
-	for (int b = 0; b < bars; b++)
-		for (int xx = x+2+b*3; xx < x+4+b*3; xx++) vline(xx, y+2, y+4);
-}
-
-static void draw_check(int x, int y)   /* a little ✓ */
-{
-	setpx(x+4,y); setpx(x+3,y+1); setpx(x,y+2); setpx(x+2,y+2);
-	setpx(x+1,y+3); setpx(x+2,y+4);
-}
 
 static void render_ready(void)
 {
@@ -352,21 +320,78 @@ static void render_error(void)
 static void render_measuring(void) { display_blank(); }
 static void render_sleep(void)     { display_blank(); }
 
-void display_show_state(enum display_state state)
+/* generalized curve: draws into any box (used by Summary's mini-plots) */
+static void draw_curve_into(int ox, int oy, int w, int h, const struct tymp_results *r)
 {
-	switch (state) {
-	case DISPLAY_BOOT:         render_boot();         break;
-	case DISPLAY_READY:        render_ready();        break;
-	case DISPLAY_SEEKING_SEAL: render_seeking_seal(); break;
-	case DISPLAY_MEASURING:    render_measuring();    break;   /* blanks */
-	case DISPLAY_RESULTS:      render_results();      break;   /* uses cur from display_show_tymp */
-	case DISPLAY_REARM:        render_rearm();        break;
-	case DISPLAY_SUMMARY:      render_summary();      break;
-	case DISPLAY_WARNING:      render_warning();      break;
-	case DISPLAY_ERROR:        render_error();        break;
-	case DISPLAY_SLEEP:        render_sleep();        break;   /* blanks */
+	int span = GRAPH_P_MAX_DAPA - GRAPH_P_MIN_DAPA;
+	int bot  = oy + h - 1;
+	int x0   = ox + (0 - GRAPH_P_MIN_DAPA) * (w - 2) / span;
+	int y10  = bot - 1 - 100 * (h - 3) / GRAPH_Y_MAX_X100;
+	for (int x = ox; x < ox + w; x += 2) { setpx(x, bot); setpx(x, y10); }
+	for (int y = oy + 1; y < bot; y += 2) setpx(x0, y);
+	int px = -1, py = -1;
+	for (int i = 0; i < r->n_points; i++) {
+		int cx = ox + (r->points[i].pressure_dapa - GRAPH_P_MIN_DAPA) * (w - 2) / span;
+		int cy = bot - 1 - r->points[i].admittance_x100 * (h - 3) / GRAPH_Y_MAX_X100;
+		if (cy < oy) cy = oy;
+		setpx(cx, cy);
+		if (px >= 0) {
+			int dx = cx - px, dy = cy - py;
+			int steps = (dx < 0 ? -dx : dx), ady = (dy < 0 ? -dy : dy);
+			if (ady > steps) steps = ady;
+			for (int s = 1; s < steps; s++) setpx(px + dx*s/steps, py + dy*s/steps);
+		}
+		px = cx; py = cy;
 	}
 }
+
+static void render_seeking_seal(void)
+{
+	memset(fb, 0, sizeof(fb));
+	ctext57(18, "ADJUST FOR", 1);
+	ctext57(30, "SEAL", 1);
+	for (int i = 0; i < 3; i++) draw_dot(56 + i*8, 46, i == seal_phase);
+	flush();
+}
+
+static void render_rearm(void)
+{
+	memset(fb, 0, sizeof(fb));
+	ctext57(16, (cur_ear == 'L') ? "RIGHT EAR NEXT" : "LEFT EAR NEXT", 1);
+	ctext57(40, "PRESS TO START", 1);
+	flush();
+}
+
+static void render_summary(void)
+{
+	memset(fb, 0, sizeof(fb));
+	ctext57(1, "SUMMARY", 1);
+	vline(63, 14, 62);
+	if (have_left) {
+		glyph57(6, 16, 'L', 1, 1);
+		glyph57(20, 16, res_left.type[0], 1, 1);
+		draw_curve_into(2, 26, 58, 36, &res_left);
+	}
+	if (have_right) {
+		glyph57(70, 16, 'R', 1, 1);
+		glyph57(84, 16, res_right.type[0], 1, 1);
+		draw_curve_into(66, 26, 58, 36, &res_right);
+	}
+	flush();
+}
+
+static void render_warning(void)
+{
+	memset(fb, 0, sizeof(fb));
+	draw_warn(20, 6);
+	text57(40, 10, "LOW", 1);
+	text57(40, 24, "BATTERY", 1);
+	flush();
+}
+
+void display_set_battery(int pct)         { batt_pct = pct; }
+void display_set_ear(char lr)             { cur_ear = lr; }
+void display_set_post(int index, bool ok) { if (index >= 0 && index < 5) post_ok[index] = ok; }
 
 void display_advance_page(void)
 {
@@ -386,20 +411,29 @@ static void page_timer_expiry(struct k_timer *t)
 }
 static K_TIMER_DEFINE(page_timer, page_timer_expiry, NULL);
 
+void display_show_state(enum display_state state)
+{
+	if (state != DISPLAY_RESULTS) k_timer_stop(&page_timer);
+	switch (state) {
+	case DISPLAY_BOOT:         render_boot();         break;
+	case DISPLAY_READY:        render_ready();        break;
+	case DISPLAY_SEEKING_SEAL: render_seeking_seal(); break;
+	case DISPLAY_MEASURING:    render_measuring();    break;   /* blanks */
+	case DISPLAY_RESULTS:      render_results();      break;   /* uses cur from display_show_tymp */
+	case DISPLAY_REARM:        render_rearm();        break;
+	case DISPLAY_SUMMARY:      render_summary();      break;
+	case DISPLAY_WARNING:      render_warning();      break;
+	case DISPLAY_ERROR:        render_error();        break;
+	case DISPLAY_SLEEP:        render_sleep();        break;   /* blanks */
+	}
+}
+
 void display_show_tymp(const struct tymp_results *res)
 {
 	cur = *res;
+	if (cur.ear == 'R') { res_right = cur; have_right = true; }
+	else                { res_left  = cur; have_left  = true; }
 	results_page = 0;
 	render_results();
 	k_timer_start(&page_timer, K_MSEC(RESULTS_PAGE_MS), K_MSEC(RESULTS_PAGE_MS));
 }
-
-void display_show_state(enum display_state state)
-{
-	if (state != DISPLAY_RESULTS)
-		k_timer_stop(&page_timer);
-	switch (state) {
-	/* ... your cases ... */
-	}
-}
-

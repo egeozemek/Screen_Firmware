@@ -1,7 +1,8 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#endif
+#include <stdint.h>
+#include <stdbool.h>
 
 #define DISPLAY_W            128
 #define DISPLAY_H            64
@@ -71,3 +72,4 @@ void display_set_battery(int pct);
 void display_set_ear(char lr);          /* 'L' or 'R' */
 void display_set_post(int index, bool ok);
 
+#endif
