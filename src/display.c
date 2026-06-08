@@ -474,6 +474,7 @@ void display_show_state(enum display_state state)
 	case DISPLAY_WARNING:      render_warning();      break;
 	case DISPLAY_ERROR:        render_error();        break;
 	case DISPLAY_SLEEP:        render_sleep();        break;   /* blanks */
+	case DISPLAY_LEVEL:        render_level();        break;
 	}
 }
 

@@ -56,6 +56,18 @@ int main(void)
 		display_show_state(DISPLAY_SUMMARY);       k_sleep(K_SECONDS(3));
 		display_show_state(DISPLAY_WARNING);       k_sleep(K_SECONDS(2));
 		display_show_state(DISPLAY_ERROR);         k_sleep(K_SECONDS(2));
+
+		static const int demo_angles[][2] = {
+			{ 12, -7 }, { 0, -14 }, { -12, -7 }, { -14, 0 },
+			{ -12, 7 }, { 0, 14 }, { 12, 7 }, { 14, 0 },
+			{ 8, 5 }, { 4, 2 }, { 0, 0 },
+		};
+		for (int i = 0; i < (int)(sizeof(demo_angles)/sizeof(demo_angles[0])); i++) {
+			display_set_angle(demo_angles[i][0], demo_angles[i][1]);
+			display_show_state(DISPLAY_LEVEL);
+			k_sleep(K_MSEC(400));
+		}
 		display_show_state(DISPLAY_SLEEP);         k_sleep(K_SECONDS(2));
+		
 	}
 }
