@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define DISPLAY_W            128
-#define DISPLAY_H            64
+#define DISPLAY_WIDTH        128
+#define DISPLAY_HEIGHT       64
 
 /* Results: pinned elements */
 #define STAT_TYPE_X          1

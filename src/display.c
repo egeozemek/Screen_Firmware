@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 static const struct device *disp; // global variable for the display device
-static uint8_t fb[DISPLAY_W * DISPLAY_H / 8]; // framebuffer for the display, 1 bit per pixel
+static uint8_t fb[DISPLAY_WIDTH * DISPLAY_HEIGHT / 8]; // framebuffer for the display, 1 bit per pixel
 
 static struct tymp_results cur; // global variable to hold the current results, so that display can access them. I didn't use a pointer, to make sure the memory doesn't have to stay valid forever. 
 static int results_page; // global variable to track which page of results we're on, since there are more results than can fit on the display at once
@@ -49,8 +49,8 @@ static int fidx(char c)
 
 static inline void setpx(int x, int y)
 {
-	if ((unsigned)x < DISPLAY_W && (unsigned)y < DISPLAY_H)
-		fb[(y >> 3) * DISPLAY_W + x] |= 1 << (y & 7);
+	if ((unsigned)x < DISPLAY_WIDTH && (unsigned)y < DISPLAY_HEIGHT)
+		fb[(y >> 3) * DISPLAY_WIDTH + x] |= 1 << (y & 7);
 }
 static void hline(int x0, int x1, int y) { for (int x = x0; x <= x1; x++) setpx(x, y); }
 static void vline(int x, int y0, int y1) { for (int y = y0; y <= y1; y++) setpx(x, y); }
@@ -156,7 +156,7 @@ static int text57(int x, int y, const char *s, int sx)
 static void ctext57(int y, const char *s, int sx)
 {
 	int w = 0; for (const char *p = s; *p; p++) w += 6 * sx;
-	text57((DISPLAY_W - w) / 2, y, s, sx);
+	text57((DISPLAY_WIDTH - w) / 2, y, s, sx);
 }
 
 static void circle(int cx, int cy, int r) {
@@ -235,9 +235,9 @@ static void flush(void)
 	display_blanking_off(disp);          /* panel on whenever we draw */
 	struct display_buffer_descriptor desc = {
 		.buf_size = sizeof(fb),
-		.width    = DISPLAY_W,
-		.height   = DISPLAY_H,
-		.pitch    = DISPLAY_W,
+		.width    = DISPLAY_WIDTH,
+		.height   = DISPLAY_HEIGHT,
+		.pitch    = DISPLAY_WIDTH,
 	};
 	display_write(disp, 0, 0, &desc, fb);
 }
@@ -266,17 +266,17 @@ static void draw_curve(void) //James Curve Plotter
 {
 	int span = GRAPH_P_MAX_DAPA - GRAPH_P_MIN_DAPA;          /* 600 daPa */
 	int bot  = GRAPH_Y + GRAPH_H - 1;                        /* bottom row, 62 */
-	int x0   = 1 + (0 - GRAPH_P_MIN_DAPA) * (DISPLAY_W - 2) / span;        /* 0 daPa column */
+	int x0   = 1 + (0 - GRAPH_P_MIN_DAPA) * (DISPLAY_WIDTH - 2) / span;        /* 0 daPa column */
 	int y10  = bot - 1 - 100 * (GRAPH_H - 3) / GRAPH_Y_MAX_X100;          /* 1.0 mL row */
 
 	/* dotted gridlines: baseline, 1.0 mL, and the 0 daPa vertical */
-	for (int x = 0; x < DISPLAY_W; x += 2) { setpx(x, bot); setpx(x, y10); }
+	for (int x = 0; x < DISPLAY_WIDTH; x += 2) { setpx(x, bot); setpx(x, y10); }
 	for (int y = GRAPH_Y + 1; y < bot; y += 2) setpx(x0, y);
 
 	/* the curve itself, with linear interpolation between points */
 	int px = -1, py = -1;
 	for (int i = 0; i < cur.n_points; i++) {
-		int cx = 1 + (cur.points[i].pressure_dapa - GRAPH_P_MIN_DAPA) * (DISPLAY_W - 2) / span;
+		int cx = 1 + (cur.points[i].pressure_dapa - GRAPH_P_MIN_DAPA) * (DISPLAY_WIDTH - 2) / span;
 		int cy = bot - 1 - cur.points[i].admittance_x100 * (GRAPH_H - 3) / GRAPH_Y_MAX_X100;
 		if (cy < GRAPH_Y) cy = GRAPH_Y;                 /* clamp to top of plot */
 		setpx(cx, cy);
